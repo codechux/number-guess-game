@@ -18,6 +18,14 @@ const dMessage = function (mess) {
   message.textContent = mess;
 };
 
+const content = function (con) {
+  display.textContent = con;
+};
+
+const color = function (col) {
+  document.querySelector("body").style.backgroundColor = col;
+};
+
 check.addEventListener("click", function () {
   const input = Number(guess.value);
 
@@ -25,9 +33,12 @@ check.addEventListener("click", function () {
     dMessage("Input a Number");
   } else if (input === correctNumber) {
     dMessage("🥰 Correct Number");
-    high = sco;
-    highscore.textContent = high;
-    display.textContent = correctNumber;
+    if (sco > high) {
+      high = sco;
+      highscore.textContent = high;
+    }
+    content(correctNumber);
+    color("green");
   } else if (input !== correctNumber) {
     if (sco > 1) {
       dMessage(
@@ -48,4 +59,7 @@ again.addEventListener("click", function () {
   score.textContent = sco;
   guess.value = "";
   correctNumber = Math.trunc(Math.random() * 100) + 1;
+  content("?");
+  dMessage("Start Guessing!!!");
+  color("#222");
 });
