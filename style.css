@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #222;
+    color: #fff;
+}
+
+.container{
+    height: 100vh;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.header{
+    text-align: center;
+    padding: 20px;
+}
+
+.header > p{
+    padding: 10px 0;
+}
+
+.show{
+    text-align: center;
+}
+
+.display{
+    font-size: 100px;
+    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.guess{
+    width: 100px;
+    padding: 12px;
+    outline: gray solid 5px;
+    background: none;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.btn > button{
+    margin-top: 20px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: none;
+}
+
+.btn .check{
+    background: transparent;
+    color: #fff;
+    outline: #fff solid 1px; 
+}
+
+.btn .check:hover{
+    background-color: #fff;
+    color: #222;
+}
+
+.btn .again:hover{
+    background: transparent;
+    color: #fff;
+    outline: #fff solid 1px; 
+}
+
+.feedback{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.feedback h2{
+    text-align: left;
+}
+
+
+
